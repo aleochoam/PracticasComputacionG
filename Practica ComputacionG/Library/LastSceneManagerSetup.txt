@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Algo.unity
+- path: Assets/Scenes/Algo.unity
   isLoaded: 1
   isActive: 1
