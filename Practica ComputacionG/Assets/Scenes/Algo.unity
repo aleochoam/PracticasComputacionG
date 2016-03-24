@@ -247,9 +247,36 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.40040606
       objectReference: {fileID: 0}
+    - target: {fileID: 6197856, guid: cb107ee8cb6c5364bbe006a65e7275e3, type: 2}
+      propertyPath: m_Offset.y
+      value: 0.0123051675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197856, guid: cb107ee8cb6c5364bbe006a65e7275e3, type: 2}
+      propertyPath: m_Size.x
+      value: 3.3900003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197856, guid: cb107ee8cb6c5364bbe006a65e7275e3, type: 2}
+      propertyPath: m_Size.y
+      value: 2.1653895
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb107ee8cb6c5364bbe006a65e7275e3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1266240312 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 121836, guid: cb107ee8cb6c5364bbe006a65e7275e3, type: 2}
+  m_PrefabInternal: {fileID: 831103351}
+--- !u!114 &1266240314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266240312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fc12557a6707e40a5778a5d12bebd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1313846456
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +314,10 @@ EdgeCollider2D:
   - {x: 0.35393235, y: -1.8163822}
   - {x: 0.7192364, y: -1.5473835}
   - {x: 1.2283939, y: -0.8587908}
-  - {x: 1.8801402, y: -0.7539302}
-  - {x: 2.4999125, y: -0.6609604}
+  - {x: 1.6040547, y: -0.800835}
+  - {x: 1.8430798, y: -0.7843164}
+  - {x: 1.9299055, y: -0.7414889}
+  - {x: 2.5596309, y: -0.7007726}
 --- !u!212 &1313846458
 SpriteRenderer:
   m_ObjectHideFlags: 0

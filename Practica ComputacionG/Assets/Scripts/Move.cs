@@ -18,10 +18,10 @@ public class Move : MonoBehaviour {
 
     void Rotate() {
         if (Input.GetKey(KeyCode.UpArrow)){
-            transform.Rotate(new Vector2(0, deltaRotation) * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, -deltaRotation) * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.DownArrow)){
-            transform.Rotate(new Vector2(0, -deltaMovement) * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, +deltaMovement) * 2*Time.deltaTime);
         }
         
     }
