@@ -4,7 +4,7 @@ using System.Collections;
 public class Move : MonoBehaviour {
 
     float deltaRotation = 30f;
-    float deltaMovement = 10f;
+    //float deltaMovement = 10f;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class Move : MonoBehaviour {
             transform.Rotate(new Vector3(0, 0, -deltaRotation) * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.DownArrow)){
-            transform.Rotate(new Vector3(0, 0, +deltaMovement) * 2*Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, +deltaRotation) * Time.deltaTime);
         }
         
     }
