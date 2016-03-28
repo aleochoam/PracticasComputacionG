@@ -8,7 +8,7 @@ public class Shooter : MonoBehaviour {
     public float fireRate = 0;
 
     public LayerMask toHit;
-    public Transform Bala;
+    public GameObject Bala;
    
     Transform PuntoDisparo;
     Transform BaseCanon;
@@ -28,30 +28,26 @@ public class Shooter : MonoBehaviour {
         //Shoot(100);
         if (fireRate == 0){
             if (Input.GetKeyDown(KeyCode.Space)){
-                float fuerza = 0;
-                /*while (Input.GetKeyDown(KeyCode.Space)) {
-                    fuerza+=10;
-
-                }*/
-                Shoot(100);
+                Shoot(1000);
             }
         }
 	}
 
     void Shoot(float fuerza){
+        
         Vector2 posicionBase = BaseCanon.position;
         RaycastHit2D hit = Physics2D.Raycast(PuntoDisparo.position, PuntoDisparo.position - BaseCanon.position, fuerza, toHit);
-        Effect();
+        
         Debug.DrawLine(posicionBase, (PuntoDisparo.position - BaseCanon.position) *100 , Color.cyan );
         if (hit.collider != null){
             Debug.DrawLine(PuntoDisparo.position, hit.point, Color.red);
+            Debug.Log("Se ha colizionado con" + hit.collider.name);
         }
+        Effect(fuerza);
     }
 
-    void Effect(){
+    void Effect(float fuerza){
         GameObject shot = Instantiate(Bala, PuntoDisparo.position, PuntoDisparo.rotation) as GameObject;
-        //shot.AddForce(new Vector3(10,0,0));
-        shot.transform.localScale += new Vector3(2, 2, 2);
-
+        shot.GetComponent<Rigidbody2D>().AddForce(PuntoDisparo.right * -fuerza);
     }
 }
